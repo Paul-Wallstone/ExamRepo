@@ -37,4 +37,14 @@ public class Circle extends Figure {
         return Objects.hash(radius);
     }
 
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                ", cx=" + cx +
+                ", cy=" + cy +
+                ", lineWith=" + lineWith +
+                ", color=" + color +
+                "} ";
+    }
 }

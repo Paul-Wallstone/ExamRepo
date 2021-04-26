@@ -30,11 +30,12 @@ public class MainScreenViewController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         figures = new ArrayList<>();
         random = new Random(System.currentTimeMillis());
-
+        logger.info("Application initialized");
     }
 
     private void addFigure(Figure figure) {
         figures.add(figure);
+        logger.info("figure was added");
     }
 
     private Figure createFigure(double x, double y) throws FigureException {
@@ -61,7 +62,13 @@ public class MainScreenViewController implements Initializable {
     @FXML
     private void onMousedClicked(MouseEvent mouseEvent) {
         try {
-            addFigure(createFigure(mouseEvent.getX(), mouseEvent.getY()));
+            Figure figure = createFigure(mouseEvent.getX(), mouseEvent.getY());
+            if (figure != null) {
+                logger.info("figure was created:" + figure.toString());
+            }
+
+            addFigure(figure);
+
         } catch (FigureException e) {
             logger.error(e.getMessage(), e);
         }

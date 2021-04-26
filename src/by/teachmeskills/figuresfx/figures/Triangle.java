@@ -23,4 +23,16 @@ public class Triangle extends Figure {
         graphicsContext.setStroke(color);
         graphicsContext.strokePolygon(new double[]{cx, cx + shiftX, cx - shiftX}, new double[]{cy - shiftY, cy + shiftY, cy + shiftY}, 3);
     }
+
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "cx=" + cx +
+                ", cy=" + cy +
+                ", lineWith=" + lineWith +
+                ", color=" + color +
+                ", shiftX=" + shiftX +
+                ", shiftY=" + shiftY +
+                "} ";
+    }
 }

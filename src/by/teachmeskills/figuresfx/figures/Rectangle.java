@@ -23,4 +23,16 @@ public class Rectangle extends Figure {
         graphicsContext.setStroke(color);
         graphicsContext.strokeRect(cx - width / 2, cy - height / 2, width, height);
     }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "cx=" + cx +
+                ", cy=" + cy +
+                ", lineWith=" + lineWith +
+                ", color=" + color +
+                ", width=" + width +
+                ", height=" + height +
+                "} ";
+    }
 }

@@ -30,4 +30,15 @@ public class MyFigure extends Figure {
 
     }
 
+    @Override
+    public String toString() {
+        return "MyFigure{" +
+                "cx=" + cx +
+                ", cy=" + cy +
+                ", lineWith=" + lineWith +
+                ", color=" + color +
+                ", shiftX=" + shiftX +
+                ", shiftY=" + shiftY +
+                "} ";
+    }
 }
